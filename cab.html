@@ -1,0 +1,745 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>  
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<!-- Include Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <!-- Bootstrap CSS -->
+ 
+</head>
+<body>
+       <!-- Top Bar -->
+       <div class="top-bar d-flex justify-content-between align-items-center">
+        <div>
+            <span><img src="image/email.png" height="20px" style="margin-right: 5px;"/> Email: info@cabmate.com</span>
+            <span class="ms-3"><img src="./image/phone.png" height="20px" style="margin-right: 5px;"/>Phone: +91 1234567890</span>
+        </div>
+        <div>
+            <span>
+              <img src="./image/indiaFlag.png" height="20px" style="margin-right: 5px;"/>India (INR) 
+              <select style="background-color: #0D1B2A;outline: none; border: none; color: white;">
+                  <option></option>
+                  <option>India</option>
+                  <option>India</option>
+                  <option>India</option>
+                  <option>India</option>
+            </select> 
+          </span>
+        </div>
+    </div>
+
+<!-- top bar end -->
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container-fluid">
+        <!-- Logo -->
+        <a class="navbar-brand" href="#">
+            <img src="https://homestay.srkwebappinnovations.com/image/cabmatelogo.png" alt="Cab Mate">
+        </a>
+
+        <!-- Toggler for Mobile View -->
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- Navbar Links -->
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="#"><img src="./image/specialOffer.png" height="50px" style="margin-right: 15px;"/>Special Offers</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#"><img src="./image/downloadApp.png" height="50px" style="margin-right: 15px;"/>Download App</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#"><img src="./image/travelAgent.png" height="50px" style="margin-right: 15px;"/>Travel Agent?</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#"><img src="./image/road.png" height="50px" style="margin-right: 15px;"/>Cab Mate Blog</a>
+                </li>
+            </ul>
+            <!-- Login/Signup Button -->
+            <a href="#" class="btn login-btn ms-3" style="background-color: #1444BD; color: white; padding: 5px 15px; border-radius: 20px; margin-right: 20px;">Login or Signup</a>
+        </div>
+    </div>
+</nav>
+<!-- nav bar end -->
+
+
+  <!-- Hero Section -->
+  <div class="hero-section">
+    <div class="overlay"></div>
+    <div class="hero-content">
+      <div class="container bg-white rounded p-4">
+        <ul class="nav nav-tabs mb-3" id="tripTabs" role="tablist">
+          <li class="nav-item" role="presentation">
+            <button class="nav-link active" id="oneway-tab" data-bs-toggle="tab" data-bs-target="#oneway" type="button" role="tab">One Way</button>
+          </li>
+          <li class="nav-item" role="presentation">
+            <button class="nav-link" id="roundtrip-tab" data-bs-toggle="tab" data-bs-target="#roundtrip" type="button" role="tab">Round Trip</button>
+          </li>
+          <li class="nav-item" role="presentation">
+            <button class="nav-link" id="local-tab" data-bs-toggle="tab" data-bs-target="#local" type="button" role="tab">Local</button>
+          </li>
+          <li class="nav-item" role="presentation">
+            <button class="nav-link" id="airport-tab" data-bs-toggle="tab" data-bs-target="#airport" type="button" role="tab">Airport</button>
+          </li>
+        </ul>
+        <div class="tab-content" id="tripTabsContent">
+  
+          <!-- One Way Form -->
+          <div class="tab-pane fade show active" id="oneway" role="tabpanel" aria-labelledby="oneway-tab">
+            <form class="row g-4 custom-form">
+              <!-- First Row -->
+              <div class="col-md-3 form-floating">
+                <input type="text" id="from" class="form-control" placeholder="From">
+                <label for="from">From</label>
+              </div>
+              <div class="col-md-3 form-floating">
+                <input type="text" id="to" class="form-control" placeholder="To">
+                <label for="to">To</label>
+              </div>
+              <div class="col-md-3 form-floating">
+                <input type="date" id="pickup-date" class="form-control" placeholder="Pick Up">
+                <label for="pickup-date">Pick Up</label>
+              </div>
+              <div class="col-md-3 form-floating">
+                <input type="time" id="pickup-time" class="form-control" placeholder="Pickup Time">
+                <label for="pickup-time">Pickup Time</label>
+              </div>
+  
+              <!-- Second Row -->
+              <div class="col-md-3 form-floating">
+                <input type="text" id="return-date" class="form-control" placeholder="Pick Up AT">
+                <label for="return-date">Pick Up AT</label>
+              </div>
+              <div class="col-md-3 form-floating">
+                <input type="tel" id="phone-number" class="form-control" placeholder="Phone Number">
+                <label for="phone-number">Phone Number</label>
+              </div>
+              <div class="col-md-3 form-floating">
+                <input type="number" id="bidding" class="form-control" placeholder="Bidding">
+                <label for="bidding">Bidding</label>
+              </div>
+              <div class="col-md-3">
+                <button type="submit" class="btn  w-100 explore-btn" style="background-color: #1444BD; color: white;">Explore Cabs</button>
+              </div>
+            </form>
+          </div>
+  
+          <!-- Round Trip Form -->
+          <div class="tab-pane fade" id="roundtrip" role="tabpanel" aria-labelledby="roundtrip-tab">
+            <form class="row g-4 custom-form">
+              <!-- First Row -->
+              <div class="col-md-3 form-floating">
+                <input type="text" id="from-roundtrip" class="form-control" placeholder="From">
+                <label for="from-roundtrip">From</label>
+              </div>
+              <div class="col-md-3 form-floating">
+                <input type="text" id="to-roundtrip" class="form-control" placeholder="To">
+                <label for="to-roundtrip">To</label>
+              </div>
+              <div class="col-md-3 form-floating">
+                <input type="date" id="pickup-date-roundtrip" class="form-control" placeholder="Pick Up">
+                <label for="pickup-date-roundtrip">Pick Up</label>
+              </div>
+              <div class="col-md-3 form-floating">
+                <input type="time" id="pickup-time-roundtrip" class="form-control" placeholder="Pickup Time">
+                <label for="pickup-time-roundtrip">Pickup Time</label>
+              </div>
+  
+              <!-- Second Row -->
+              <div class="col-md-3 form-floating">
+                <input type="date" id="return-date-roundtrip" class="form-control" placeholder="Return Date">
+                <label for="return-date-roundtrip">Return Date</label>
+              </div>
+              <div class="col-md-3 form-floating">
+                <input type="tel" id="phone-number-roundtrip" class="form-control" placeholder="Phone Number">
+                <label for="phone-number-roundtrip">Phone Number</label>
+              </div>
+              <div class="col-md-3 form-floating">
+                <input type="number" id="bidding-roundtrip" class="form-control" placeholder="Bidding">
+                <label for="bidding-roundtrip">Bidding</label>
+              </div>
+              <div class="col-md-3">
+                <button type="submit" class="btn  w-100 explore-btn"  style="background-color: #1444BD; color: white;">Explore Cabs</button>
+              </div>
+            </form>
+          </div>
+  
+          <!-- Local Form -->
+          <div class="tab-pane fade" id="local" role="tabpanel" aria-labelledby="local-tab">
+            <form class="row g-4 custom-form">
+              <!-- First Row -->
+              <div class="col-md-3 form-floating">
+                <input type="text" id="from-local" class="form-control" placeholder="From">
+                <label for="from-local">From</label>
+              </div>
+              <div class="col-md-3 form-floating">
+                <input type="text" id="to-local" class="form-control" placeholder="To">
+                <label for="to-local">To</label>
+              </div>
+              <div class="col-md-3 form-floating">
+                <input type="date" id="pickup-date-local" class="form-control" placeholder="Pick Up">
+                <label for="pickup-date-local">Pick Up</label>
+              </div>
+              <div class="col-md-3 form-floating">
+                <input type="time" id="pickup-time-local" class="form-control" placeholder="Pickup Time">
+                <label for="pickup-time-local">Pickup Time</label>
+              </div>
+  
+              <!-- Second Row -->
+              <div class="col-md-3 form-floating">
+                <input type="tel" id="phone-number-local" class="form-control" placeholder="Phone Number">
+                <label for="phone-number-local">Phone Number</label>
+              </div>
+              <div class="col-md-3 form-floating">
+                <input type="number" id="bidding-local" class="form-control" placeholder="Bidding">
+                <label for="bidding-local">Bidding</label>
+              </div>
+              <div class="col-md-3">
+                <button type="submit" class="btn w-100 explore-btn"  style="background-color: #1444BD; color: white;">Explore Cabs</button>
+              </div>
+            </form>
+          </div>
+  
+          <!-- Airport Form -->
+          <div class="tab-pane fade" id="airport" role="tabpanel" aria-labelledby="airport-tab">
+            <form class="row g-4 custom-form">
+              <!-- First Row -->
+              <div class="col-md-3 form-floating">
+                <input type="text" id="from-airport" class="form-control" placeholder="From">
+                <label for="from-airport">From</label>
+              </div>
+              <div class="col-md-3 form-floating">
+                <input type="text" id="to-airport" class="form-control" placeholder="To">
+                <label for="to-airport">To</label>
+              </div>
+              <div class="col-md-3 form-floating">
+                <input type="date" id="pickup-date-airport" class="form-control" placeholder="Pick Up">
+                <label for="pickup-date-airport">Pick Up</label>
+              </div>
+              <div class="col-md-3 form-floating">
+                <input type="time" id="pickup-time-airport" class="form-control" placeholder="Pickup Time">
+                <label for="pickup-time-airport">Pickup Time</label>
+              </div>
+  
+              <!-- Second Row -->
+              <div class="col-md-3 form-floating">
+                <input type="tel" id="phone-number-airport" class="form-control" placeholder="Phone Number">
+                <label for="phone-number-airport">Phone Number</label>
+              </div>
+              <div class="col-md-3 form-floating">
+                <input type="number" id="bidding-airport" class="form-control" placeholder="Bidding">
+                <label for="bidding-airport">Bidding</label>
+              </div>
+              <div class="col-md-3">
+                <button type="submit" class="btn w-100 explore-btn"  style="background-color: #1444BD; color: white;">Explore Cabs</button>
+              </div>
+            </form>
+          </div>
+  
+        </div>
+      </div>
+    </div>
+  </div>
+<br><br><br>
+  <!-- hero section end -->
+
+
+    <!-- cab matte section  -->
+    <div class="cabmate my-5">
+      <div class="cab-card" style="background-image: url('Drinkware (2).png'); background-size: 100% 100%;">     </div>
+      <div class="cab-card" style="background-image: url('Drinkware.png'); background-size: 100% 100%;">     </div>
+      <div class="cab-card" style="background-image: url('Drinkware (1).png'); background-size: 100% 100%;">     </div>
+    </div>
+
+    
+    <!-- end of cabmate -->
+
+
+    
+<!-- Services Section -->
+<section class="services-section ">
+    <div class="container1">
+        <div class="section-header">
+            <h2 class="our-services">Our Services</h2>
+            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem <br> Ipsum  has been the industry's standard dummy text</p>
+        </div>
+        <!-- Carousel -->
+        <div id="servicesCarousel" class="carousel slide">
+          <div class="carousel-inner" style="padding: 30px;">
+              <!-- First set of 4 items (active item) -->
+              <div class="carousel-item active crrr">
+                  <div class="row ">
+                      <!-- Card 1 -->
+                      <div class="col-md-3 col-12">
+                          <div class="card mt-3" style="display: flex; align-items: center; padding-top: 10px;">
+                              <img src="https://homestay.srkwebappinnovations.com/image/round-trip.png" alt="Roundtrip Cabs" class="card-img-top" style="width: 90%;">
+                              <div class="card-body mt-4">
+                                <div class="service-icon">
+                                  <img src="image/Group 1000006041.png" alt="">
+                              </div>
+                                  <h5 class="card-title">Roundtrip Cabs</h5>
+                                  <p class="card-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                              </div>
+                          </div>
+                      </div>
+                      <!-- Card 2 -->
+                      <div class="col-md-3 col-12">
+                          <div class="card mt-3" style="display: flex; align-items: center; padding-top: 10px;">
+                              <img src="https://homestay.srkwebappinnovations.com/image/oneway-drops.png" alt="Oneway Drops" class="card-img-top" style="width: 90%;">
+                              <div class="card-body mt-4">
+                                <div class="service-icon">
+                                  <img src="image/Group 1000006041.png"  alt="">
+                              </div>
+                                  <h5 class="card-title">Oneway Drops</h5>
+                                  <p class="card-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                              </div>
+                          </div>
+                      </div>
+                      <!-- Card 3 -->
+                      <div class="col-md-3 col-12">
+                          <div class="card mt-3" style="display: flex; align-items: center; padding-top: 10px;">
+
+                              <img src="https://homestay.srkwebappinnovations.com/image/local-rentals.png" alt="Local Rentals" class="card-img-top" style="width: 90%;">
+                              <div class="card-body mt-4">
+
+                                <div class="service-icon">
+
+                                  <img src="image/Group (1).png" alt="">
+                              </div>
+                                  <h5 class="card-title">Local Rentals</h5>
+                                  <p class="card-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                              </div>
+                          </div>
+                      </div>
+                      <!-- Card 4 -->
+                      <div class="col-md-3 col-12">
+
+                          <div class="card mt-3" style="display: flex; align-items: center; padding-top: 10px;">
+                              <img src="https://homestay.srkwebappinnovations.com/image/airport-transfers.png" alt="Airport Transfers" class="card-img-top" style="width: 90%;">
+                              <div class="card-body mt-4">
+                                <div class="service-icon">
+                                  <img src="image/Group (2).png" alt="">
+                              </div>
+                                  <h5 class="card-title">Airport Transfers</h5>
+                                  <p class="card-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+      
+              <!-- Second set of 4 items (inactive item) -->
+              <div class="carousel-item">
+                <div class="row">
+                    <!-- Card 1 -->
+                    <div class="col-md-3 col-12">
+                        <div class="card mt-3" style="display: flex; align-items: center; padding-top: 10px;">
+                            <img src="https://homestay.srkwebappinnovations.com/image/round-trip.png" alt="Roundtrip Cabs" class="card-img-top" style="width: 90%;">
+                            <div class="card-body mt-4">
+                              <div class="service-icon">
+                                <img src="image/Group 1000006041.png" alt="">
+                            </div>
+                                <h5 class="card-title">Roundtrip Cabs</h5>
+                                <p class="card-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Card 2 -->
+                    <div class="col-md-3 col-12">
+                        <div class="card mt-3" style="display: flex; align-items: center; padding-top: 10px;">
+                            <img src="https://homestay.srkwebappinnovations.com/image/oneway-drops.png" alt="Oneway Drops" class="card-img-top" style="width: 90%;">
+                            <div class="card-body mt-4">
+                              <div class="service-icon">
+                                <img src="image/Group.png"  alt="">
+                            </div>
+                                <h5 class="card-title">Oneway Drops</h5>
+                                <p class="card-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Card 3 -->
+                    <div class="col-md-3 col-12">
+                        <div class="card mt-3" style="display: flex; align-items: center; padding-top: 10px;">
+
+                            <img src="https://homestay.srkwebappinnovations.com/image/local-rentals.png" alt="Local Rentals" class="card-img-top" style="width: 90%;">
+                            <div class="card-body mt-4">
+
+                              <div class="service-icon">
+
+                                <img src="image/Group (1).png" alt="">
+                            </div>
+                                <h5 class="card-title">Local Rentals</h5>
+                                <p class="card-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Card 4 -->
+                    <div class="col-md-3 col-12">
+
+                        <div class="card mt-3" style="display: flex; align-items: center; padding-top: 10px;">
+                            <img src="https://homestay.srkwebappinnovations.com/image/airport-transfers.png" alt="Airport Transfers" class="card-img-top" style="width: 90%;">
+                            <div class="card-body mt-4">
+                              <div class="service-icon">
+                                <img src="image/Group (2).png" alt="">
+                            </div>
+                                <h5 class="card-title">Airport Transfers</h5>
+                                <p class="card-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+          </div>
+          <!-- Carousel controls -->
+          <button class="carousel-control-prev" type="button" data-bs-target="#servicesCarousel" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#servicesCarousel" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+          </button>
+      </div>
+      
+
+        <!-- Card Layout for Small Devices -->    </div>
+</section>
+
+
+<!-- service section end -->
+
+
+<!-- what cambame -->
+<section class="header-section text-center py-5">
+    <h2 class="fw-bold" style="color: #5A87FB;">What Sets Cab Mate Apart?</h2>
+    <p class="text-muted">Lorem Ipsum is simply dummy text of the printing and typesetting industry.Lorem ipsum dolor sit amet.</p>
+
+    <div class="container2">
+      <div class="feature-box text-center d-flex gap-2">
+        <img src="./Group 1000006042.png" alt="Smart Chauffeurs" class="mb-2">
+        <p>Expert <br> Chauffeurs</p>
+      </div>
+      <div class="feature-box text-center d-flex gap-3">
+        <img src="./ved.png" alt="Transparent Billing" class="mb-2">
+        <p>Transparent <br> Billing</p>
+      </div>
+      <div class="feature-box text-center d-flex gap-3">
+        <img src="./ved2.png" alt="2000+ Cities" class="mb-2">
+        <p>2000+ <br> Cities</p>
+      </div>
+      <div class="feature-box text-center d-flex gap-3">
+        <img src="./ved3.png" alt="2000+ Cities" class="mb-2">
+        <p>2000+  <br> Cities</p>
+      </div>
+    </div>
+</section>
+
+<!-- what cabmate say end -->
+
+ <!-- Benefits Section -->
+ <section class="benefits-section text-white py-5 ">
+    <div class="row">
+
+    <div class="col-sm-6">
+    <div class="container3 text-center p-6">
+      <h2 class="fw-bold">See Some Benefits of Joining Us</h2>
+      <p class="text-white" style="margin-left: 50px;text-align: justify;">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text</p>
+      <div class="row mt-5">
+        <div class="col-md-4">
+            <div class="benefit-box p-4 maindiv">
+              <div class="cir" style="background-color: #0B384C; color: white;"><h4 class="fw-bold">01</h4></div>
+              <h5>Get best deals</h5>
+              <span class="text-black">Unlock Unbeatable Deals and Discounts for Your Dream Getaways. Explore Exotic Destinations, Luxury Accommodations, and Exciting Activities .</span>
+            </div>
+          </div>
+        <div class="col-md-4">
+          <div class="benefit-box p-4 maindiv" style="background-color:#3C6BE1 ;">
+            <div class="cir"  style="border:1px solid white;background-color: white; color: #1444BD;">
+              <h4 class="fw-bold">02</h4></div>
+            <h5 class="text-white">100% price transparency</h5>
+            <span class="text-white">Unlock Unbeatable Deals and Discounts for Your Dream Getaways. Explore Exotic Destinations, Luxury Accommodations, and Exciting Activities .</span>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="benefit-box p-4 maindiv">
+            <div class="cir" style="background-color: #FAB103; color: white;"><h4 class="fw-bold">03</h4></div>
+            <h5>Travel with more confidence</h5>
+            <span>Unlock Unbeatable Deals and Discounts for Your Dream Getaways. Explore Exotic Destinations, Luxury Accommodations, and Exciting Activities .</span>
+          </div>
+        </div>
+      </div>
+    </div></div>
+    <div class="col-sm-6">
+    <div class="wave-overlay">
+        <div class="left-div">
+            <div class="left-img">
+                <img src="image/joiningus-2.jpeg" alt="">
+            </div>
+        </div>
+        <div class="right-div">
+            <div class="right-img">
+                <img src="image/joiningus-1.jpeg" alt="">
+            </div>
+        </div>
+    </div>
+
+
+</div></div>
+  </section>
+    
+
+  <!-- end benefits -->
+
+
+    <!-- Hourly Car Rentals Section -->
+    <section class="hourly-rentals py-5">
+        <div class="container4 text-center">
+          <h2 class="fw-bold">Flexible Hourly Car Rentals in India</h2>
+          <p class="text-muted">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+          <div class="row mt-4">
+            <div class="col-md-3 col-sm-6 mb-4">
+              <div class="card">
+                <div class="hourly-dumy">
+                  <img src="image/Group 1000006055.png" style="height: 50px; position: relative; top: 15px; width: 50px; border-radius:50%;" alt="">
+                </div>
+                <img src="Group 1000006054.png" class="card-img-top" alt="Car in Chennai">
+              </div>
+              <div class="Hourly-details">
+                <div>
+                  <h6 class="text-black">Hyderabad</h6>
+                  <p class="text-black">Andhra Pradesh</p>
+                </div>&emsp;&emsp;&emsp;
+                <div style="display: flex; ">
+                    <span>From</span><h6>&#8377;940</h6>
+                </div>
+              </div>
+              <button class="Hourly-btn">Book Now</button>
+            </div>
+            <div class="col-md-3 col-sm-6 mb-4">
+              <div class="card">
+                <div class="hourly-dumy">
+                  <img src="image/Group 1000006055.png" style="height: 50px; position: relative; top: 15px; width: 50px; border-radius:50%;" alt="">
+                </div>
+                <img src="Group 1000006054.png" class="card-img-top" alt="Car in Chennai">
+              </div>
+              <div class="Hourly-details">
+                <div>
+                  <h6 class="text-black">Hyderabad</h6>
+                  <p class="text-black">Andhra Pradesh</p>
+                </div>&emsp;&emsp;&emsp;
+                <div style="display: flex; ">
+                  <span>From</span><h6>&#8377;940</h6>
+                </div>
+              </div>
+              <button class="Hourly-btn">Book Now</button>
+            </div>
+            <div class="col-md-3 col-sm-6 mb-4">
+              <div class="card">
+                <div class="hourly-dumy">
+                  <img src="image/Group 1000006055.png" style="height: 50px; position: relative; top: 15px; width: 50px; border-radius:50%;" alt="">
+                </div>
+                <img src="Group 1000006054.png" class="card-img-top" alt="Car in Chennai">
+              </div>
+              
+              <div class="Hourly-details">
+                <div>
+                    <h6 class="text-black">Hyderabad</h6>
+                    <p class="text-black">Andhra Pradesh</p>
+                  </div>&emsp;&emsp;&emsp;
+                  <div style="display: flex; ">
+                    <span>From</span><h6>&#8377;940</h6>
+                  </div>
+                </div>
+                <button class="Hourly-btn">Book Now</button>
+              </div>
+              <div class="col-md-3 col-sm-6 mb-4">
+                <div class="card">
+                  <div class="hourly-dumy">
+                    <img src="image/Group 1000006055.png" style="height: 50px; position: relative; top: 15px; width: 50px; border-radius:50%;" alt="">
+                  </div>
+                <img src="Group 1000006054.png" class="card-img-top" alt="Car in Chennai">
+              </div>
+              <div class="Hourly-details">
+                <div>
+                  <h6 class="text-black">Hyderabad</h6>
+                    <p class="text-black">Andhra Pradesh</p>
+                </div>&emsp;&emsp;&emsp;
+                <div style="display: flex; ">
+                    <span>From</span><h6>&#8377;940</h6>
+                </div>
+              </div>
+              <button class="Hourly-btn">Book Now</button>
+            </div>
+          </div>
+        </div>
+      </section>
+      
+  <!-- end hourly  -->
+    <!-- Testimonials Section -->
+
+
+
+      <!-- end of terminologies -->
+
+
+     
+      <!-- Feature Section -->
+    
+      <section class="feature-section container22">
+        <header class="header-section11 ">
+          <h1>India's Largest Intercity and Local Cab Services</h1>
+          <span style="text-align: justify; margin-left: 8%;">We are Cab Mate Car Rentals, an online cab booking aggregator, providing customers with reliable 
+          </span><br>
+          <span style="text-align: justify; margin-left: 8%;"> and premium Intercity and Local car rental services. Over the last decade, we are uniquely placed as </span><br>
+          <span style="text-align: justify; margin-left: 8%;"> the largest chauffeur driven car rental company in India in terms of geographical reach.</span>
+        </header>
+        <div class="row align-items-center">
+          <div class="col-md-6 position-relative">  
+            <div class="feature-img">
+              <img  src="image/intercitysection copy.jpeg" class="imhh" alt="Feature Image">
+              <div class="box box-green"></div>
+              <div class="box box-red"></div>
+            </div>
+          </div>
+          <div class="col-md-6 py-5" style="text-align: justify;">
+            <h2>Exploring India, one road trip at a time</h2>
+            <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis a quidem veniam suscipit voluptates perspiciatis dicta veritatis consequatur, eius dignissimos praesentium vel! Fugiat quaerat modi ab totam libero, quibusdam adipisci?</span><br>
+            <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae amet exercitationem assumenda impedit nihil, doloremque nulla itaque minima repudiandae enim quas illum iusto modi, mollitia nam velit, voluptate temporibus. Veniam.</span><br>
+            <span>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ea ratione, voluptates laudantium corporis quaerat totam suscipit eaque iusto! Quia quis accusantium iure quas vero cupiditate, ullam ut perspiciatis assumenda. Ducimus?</span>
+            <h3>No matter where you travel - we've got a cab for you</h3>
+            <span>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Placeat suscipit et voluptates facere similique, eum molestiae sit sunt illum maiores veritatis cumque magni modi consequatur quos voluptas qui nesciunt id?</span><br>
+            <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum ad nesciunt, fugit officiis culpa aspernatur incidunt deserunt necessitatibus numquam pariatur minima itaque fuga illo laudantium atque quae commodi! Aut, consequuntur.</span>
+            <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum ad nesciunt, fugit officiis culpa aspernatur incidunt deserunt necessitatibus numquam pariatur minima itaque fuga illo laudantium atque quae commodi! Aut, consequuntur.</span>
+            <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum ad nesciunt, fugit officiis culpa aspernatur incidunt deserunt necessitatibus numquam pariatur minima itaque fuga illo laudantium atque quae commodi! Aut, consequuntur.</span>
+            <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum ad nesciunt, fugit officiis culpa aspernatur incidunt deserunt necessitatibus numquam pariat.</span>
+          </div>
+        </div>
+      </section>
+      
+
+      <!-- features end -->
+
+
+        <!-- App Download Section -->
+        <div class="row app-container">
+            <div class="col-sm-1"></div>
+            <div class="col-sm-10">
+                <section class="text-center my-5 d-flex app-section">
+                    <div class="left-side">
+                        <h1 class="title">Download App Now!</h1>
+                        <p class="promo-text" style="margin-right: 20px;">Use code <span style="color: #1444BD;">METR1</span> and get <span style="color: #1444BD;">FLAT 10%</span> off on your <br> domestic flight booking</p>
+                        <div class="input-group mb-3">
+                            <span class="input-group-text"><img src="Frame 14546.png" alt="icon"></span>
+                            <div class="form-floating">
+                              <input type="text" class="form-control" id="floatingInputGroup1" placeholder="Mobile number">
+                              <label for="floatingInputGroup1">Mobile number</label>
+                            </div>
+                            
+                        </div>
+                        <button class="get-btn">Get App Link</button>
+                        <div style="display: flex; align-items: center; gap: 20px; padding-top: 22px;">
+                            <div style="display: flex; align-items: center; justify-content: center; gap: 6px; background-color: #000; color: white; border-radius: 10px; height: 50px; width: 150px;" class="btn btn-outline-dark" >
+                              <div><img src="play.jpeg" style="height: 20px;" alt=""></div>
+                              <div>
+                                <p style="line-height: 1px; padding-top: 8px;">get it on</p>
+                                <p style="line-height: 1px;">Google Play</p></div>
+                            </div>
+                            <div style="display: flex; align-items: center; justify-content: center; gap: 6px; background-color: #000; color: white; border-radius: 10px; height: 50px; width: 150px;"" class="btn btn-outline-dark" >
+                              <div><img src="apple.png" style="height: 20px;" alt=""></div>
+                              <div>
+                                <p style="line-height: 1px; padding-top: 8px;">get it on</p>
+                                <p style="line-height: 1px;">Google Play</p></div>
+                            </div>
+                          </div>
+                    </div>
+                    <div class="right-side">
+                        <div class="image-container">
+                            <img src="image/download-app.png" class="img-fluid" alt="Download App">
+                        </div>
+                    </div>
+                </section>
+            </div>
+            <div class="col-sm-1"></div>
+        </div>
+        
+
+        <!-- app download end -->
+
+
+          <!-- Footer -->
+         
+          <footer class="footer">
+            <div class="row" style="position: relative;bottom: 20px;">
+                <div style="height: 100px; width: 50%; background-color: #111416; position: absolute; clip-path: polygon(0% 0%, 90% 0%, 100% 100%, 100% 100%, 0% 100%, 0% 0%);
+          "></div>
+                <div style="height: 100px; width: 100%; background-color: #5A87FB;"></div>
+              </div>
+              <div class="">
+                  <div class="row">
+                      <div class="col-md-3" style="padding: 30px;">
+                          <img style="height: 80px;" src="https://homestay.srkwebappinnovations.com/image/ggds1.png" alt="Cab Image" class="img-fluid rounded">
+                          <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley. </p>
+                      </div>
+                      <div class="col-md-3"">
+                          <!--<span style color="#789DFE">-->
+                          <h5 style="margin-left: 20px;">Quick <span style="color: #6483D2;">Links</span></h5>
+                          <ul style="list-style-type: none;">
+                              <li><img src="./Group 15.png" alt="">&nbsp;<a href="#">Join Our Family</a></li>
+                              <li><img src="./Group 15.png" alt="">&nbsp;<a href="#">Contact Us</a></li>
+                              <li><img src="./Group 15.png" alt="">&nbsp;<a href="#">Privacy Policy</a></li>
+                              <li><img src="./Group 15.png" alt="">&nbsp;<a href="#">Case Study</a></li>
+                              <li><img src="./Group 15.png" alt="">&nbsp;<a href="#">Blog</a></li>
+                          </ul>
+                      </div>
+                      <div class="col-md-3">
+                          <h5 style="margin-left: 20px;">Our <span style="color: #6483D2;">Services</span></h5>
+                          <ul style="list-style: none;">
+                              <li><img src="./Group 15.png" alt="">&nbsp;<a href="#">Local Car Rentals</a></li>
+                              <li><img src="./Group 15.png" alt="">&nbsp;<a href="#">Outstation Taxi</a></li>
+                              <li><img src="./Group 15.png" alt="">&nbsp;<a href="#">One-way Cabs</a></li>
+                              <li><img src="./Group 15.png" alt="">&nbsp;<a href="#">Corporate Car Rental</a></li>
+                              <li><img src="./Group 15.png" alt="">&nbsp;<a href="#">Airport Taxi</a></li>
+                          </ul>
+                      </div>
+                      <div class="col-md-3">
+                          <h5>Contact <span style="color: #6483D2;">Us</span></h5>
+                          <p>
+                              <strong style="color: #6483D2;">Call us:</strong> <br> 033-6642-6642<br>
+                              <strong style="color: #6483D2;"">Email: <br></strong> info@cabmate.com
+                          </p>
+                      </div>
+                  </div>
+              </div>
+            <div style="display: flex;">
+              <hr style="width: 80%;margin-left: 60px;">&emsp;
+              <div style="display: flex; gap: 6px; align-items: center; justify-content: center;">
+                <div style="height: 30px; width: 30px; border: 1px solid white; display: flex; align-items: center; justify-content: center;"><i class="bi bi-facebook"></i></div>
+                <div style="height: 30px; width: 30px; border: 1px solid white; display: flex; align-items: center; justify-content: center;"><i class="bi bi-twitter-x"></i></div>
+                <div style="height: 30px; width: 30px; border: 1px solid white; display: flex; align-items: center; justify-content: center;"><i class="bi bi-instagram"></i></div>
+                <div style="height: 30px; width: 30px; border: 1px solid white; display: flex; align-items: center; justify-content: center;"><i class="bi bi-linkedin"></i></div>
+              </div>
+            </div>
+          </footer>
+          <footer class="bg-dark text-white text-center py-3">
+            <div style="display: flex; align-items: center;justify-content: space-around; padding-top: 5px;">
+              <img src="./large-preview 1.png" alt=""/>
+              <p>Copyrigts © 2024 <span style="color: #6483D2; cursor: pointer;">CabMate</span>. All Rights Reserved.</p>
+              
+            </div>
+          </footer>
+        <!-- Bootstrap Bundle JS -->
+        <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script> -->
+</body>
+</html>

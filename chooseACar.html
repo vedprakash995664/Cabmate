@@ -1,0 +1,620 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Car Booking Card</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f7f7f7;
+      /* display: flex; */
+      /* flex-direction: column; */
+      /* justify-content: center; */
+      /* align-items: center; */
+      height: 100vh;
+      margin: 20px auto;
+    }
+
+    .card {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      max-width: 800px;
+      height: 130px;
+      width: 90%;
+      border: 1px solid #1444BD;
+      overflow: hidden; /* Ensures button stays flush with the border */
+    }
+
+    .car-info {
+      background-color: #F6F9FF;
+      width: 250px;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      border-radius: 10px 0 0 10px;
+      padding: 15px;
+    }
+
+    .separator {
+      height: 100%;
+      width: 1px;
+      background-color: #1444BD;
+    }
+
+    .car-info img {
+      width: 80px;
+      height: auto;
+      margin-right: 15px;
+    }
+
+    .car-info h3 {
+      font-size: 18px;
+      margin: 0;
+    }
+
+    .details {
+      display: flex;
+      gap: 10px;
+      text-align: center;
+      margin: 0 10px;
+    }
+
+    .details-rated {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 10px 0;
+    }
+
+    .rated-cab {
+      height: 40px;
+      width: 40px;
+      border-radius: 50%;
+      border: 1px solid #0056b3;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .price {
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+      gap: 10px;
+      width: 200px;
+      margin: 0 10px;
+    }
+
+    .price div {
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+      align-items: center;
+      justify-content: space-around;
+    }
+
+    .price p {
+      margin: 0;
+    }
+
+    .price .discount {
+      color: green;
+      font-size: 14px;
+    }
+
+    .price .final {
+      font-size: 20px;
+      color: #e74c3c;
+      font-weight: bold;
+    }
+
+    .price select {
+      background-color: #117dd4;
+      color: #fff;
+      border-radius: 3px;
+      border: none;
+      padding: 5px;
+    }
+    .price .save{
+        color: #117dd4; 
+        font-size: 12px;
+    }
+
+    .select-btn {
+      height: 100%; /* Stretches button to match card's full height */
+      width: 140px;
+      background-color: #1444BD;
+      color: white;
+      border: none;
+      cursor: pointer;
+      font-size: 18px;
+      text-transform: uppercase;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      border-radius: 0; /* Removes rounding to keep it flush */
+    }
+
+    .select-btn:hover {
+      background-color: #0056b3;
+    }
+
+    /* Responsive Styles */
+    @media (max-width: 768px) {
+      .card {
+        flex-wrap: wrap;
+        justify-content: space-between;
+        padding: 10px;
+        max-width: 100%;
+        height: auto;
+      }
+
+      .car-info {
+        flex: 1 1 100%;
+        justify-content: space-around;
+        padding: 10px;
+        border-radius: 10px 10px 0 0;
+      }
+      .car-info p{
+        color: grey; 
+        font-size: 14px;
+      }
+
+      .separator {
+        display: none;
+      }
+
+      .details {
+        flex: 1 1 100%;
+        justify-content: space-around;
+        margin: 10px 0;
+      }
+
+      .rated-cab {
+      height: 70px;
+      width: 70px;
+      border-radius: 50%;
+      border: 1px solid #0056b3;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 16px;
+    }
+      .rated-cab img{
+      height: 60px;
+      width: 60px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+
+      .price {
+        flex: 1 1 100%;
+        justify-content: space-between;
+        padding: 0 10px;
+        margin-bottom: 10px;
+      }
+      .price .discount{
+          font-size: 25px;
+      }
+      .price .save{ 
+        font-size: 18px;
+    }
+
+      .select-btn {
+        flex: 1 1 100%;
+        width: 100%;
+        height: 70px;
+        border-radius: 0 0 10px 10px;
+        font-size: 23px;
+      }
+
+      .car-info img {
+        width: 200px;
+      }
+
+      .car-info h3 {
+        font-size: 23px;
+      }
+
+      .car-info p {
+        font-size: 18px;
+      }
+
+      .price .final {
+        font-size: 18px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .car-info h3 {
+        font-size: 22px;
+      }
+      .car-info p {
+        font-size: 16px;
+      }
+
+      .price .final {
+        font-size: 16px;
+      }
+
+      .price .discount {
+        font-size: 12px;
+      }
+
+      .select-btn {
+        font-size: 14px;
+      }
+
+      .price select {
+        font-size: 12px;
+      }
+      
+      .rated-cab {
+      height: 70px;
+      width: 70px;
+      border-radius: 50%;
+      border: 1px solid #0056b3;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 16px;
+    }
+      .rated-cab img{
+      height: 60px;
+      width: 60px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    }
+
+   /* Tab Styles */
+.tabs-container {
+  display: none;
+  width: 100%;
+  max-width: 760px;
+  background: white;
+  border: 1px solid #1444BD;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  position: relative;
+  margin-top: 20px;
+}
+
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background-color: #ff4d4d;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.close-btn:hover {
+  background-color: #ff1a1a;
+}
+
+.tabs-header {
+  display: flex;
+  border-bottom: 2px solid #1444BD;
+  margin-bottom: 10px;
+}
+
+.tab-button {
+  flex: 1;
+  text-align: center;
+  padding: 10px;
+  cursor: pointer;
+  font-weight: bold;
+  color: #1444BD;
+  border: none;
+  background: transparent;
+  transition: all 0.3s ease;
+}
+
+.tab-button.active {
+  background: #1444BD;
+  color: white;
+  border-radius: 5px 5px 0 0;
+}
+
+.tab-content {
+  display: none;
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+.tab-content.active {
+  display: flex;
+  justify-content: space-around;
+  gap: 10px;
+}
+
+.tab-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  width: 20%;
+}
+
+.tab-item img {
+  width: 30px;
+  height: auto;
+  margin-bottom: 5px;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .tabs-container {
+    padding: 15px;
+    margin: 10px 20px;
+  }
+
+  .tabs-header {
+    flex-direction: column;
+  }
+
+  .tab-button {
+    padding: 12px;
+  }
+
+  .tab-item {
+    width: 30%;
+  }
+
+  .tab-item img {
+    width: 40px;
+  }
+
+  .price {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .price select {
+    font-size: 14px;
+  }
+
+  .select-btn {
+    font-size: 16px;
+    height: 50px;
+  }
+
+  .card {
+    flex-wrap: wrap;
+    max-width: 100%;
+    height: auto;
+  }
+
+  .car-info {
+    flex: 1 1 100%;
+    justify-content: space-around;
+    padding: 10px;
+  }
+
+  .separator {
+    display: none;
+  }
+
+  .details {
+    flex: 1 1 100%;
+    justify-content: space-around;
+    margin: 10px 0;
+  }
+
+  .rated-cab {
+    height: 60px;
+    width: 60px;
+  }
+
+  .price .discount {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .tabs-container {
+    margin-top: 0;
+  }
+
+  .tab-item {
+    width: 45%;
+  }
+
+  .tab-item img {
+    width: 25px;
+  }
+
+  .tab-button {
+    font-size: 14px;
+  }
+
+  .price select {
+    font-size: 12px;
+  }
+
+  .select-btn {
+    font-size: 14px;
+    height: 45px;
+  }
+}
+  </style>
+</head>
+<body>
+  <div class="card">
+    <!-- Car Info Section -->
+    <div class="car-info">
+      <img src="./image/2.png" alt="Car Image">
+      <div>
+        <h3>Wagon R</h3>
+        <p style="">or equivalent</p>
+      </div>
+    </div>
+    <div class="separator"></div>
+
+    <!-- Details Section -->
+    <div class="details">
+      <div class="details-rated">
+        <div class="rated-cab">
+          <img src="./image/cap.png" alt="cap">
+        </div>
+        <p>Top Rated Cabs & Chauffeurs</p>
+      </div>
+      <div class="details-rated">
+        <div class="rated-cab">
+          <img src="./image/tax.png" alt="tax">
+        </div>
+        <p>Includes Toll, State Tax & GST</p>
+      </div>
+    </div>
+
+    <!-- Pricing Section -->
+    <div class="price">
+      <div>
+        <p class="discount" style="font-size: 18px;">₹2345</p>
+        <p class="save" >Save ₹213</p>
+      </div>
+      <div>
+        <p class="final">₹2132</p>
+        <small>up to 200 km</small>
+        <select>
+          <option>Details</option>
+          <option>Option 1</option>
+          <option>Option 2</option>
+        </select>
+      </div>
+    </div>
+
+    <!-- Select Button -->
+    <div class="select-btn">Select</div>
+  </div>
+    <!-- Tab container (Initially hidden) -->
+    <div class="tabs-container">
+        <!-- Close Button -->
+        <button class="close-btn" onclick="closeTabs()">X</button>
+    
+        <!-- Tabs Header -->
+        <div class="tabs-header">
+          <button class="tab-button active" data-tab="inclusions">Inclusions</button>
+          <button class="tab-button" data-tab="exclusions">Exclusions</button>
+          <button class="tab-button" data-tab="facilities">Facilities</button>
+          <button class="tab-button" data-tab="tnc">T&C</button>
+        </div>
+    
+        <!-- Tabs Content -->
+        <div class="tab-content active" id="inclusions">
+          <div class="tab-item">
+            <img src="./image/patrol.png" alt="Inclusion">
+            <p>Base Fare for 200 km</p>
+          </div>
+          <div class="tab-item">
+            <img src="./image/driver.png" alt="Driver">
+            <p>Driver Allowance</p>
+          </div>
+          <div class="tab-item">
+            <img src="./image/tax.png" alt="Tax">
+            <p>State Tax & Toll</p>
+          </div>
+          <div class="tab-item">
+            <img src="./image/gst.png" alt="GST">
+            <p>GST (6%)</p>
+          </div>
+        </div>
+    
+        <div class="tab-content" id="exclusions">
+          <div class="tab-item">
+            <img src="./image/exclusion.png" alt="Exclusion">
+            <p>Fuel Charges</p>
+          </div>
+          <div class="tab-item">
+            <img src="./image/other.png" alt="Other">
+            <p>Extra KM Fare</p>
+          </div>
+        </div>
+    
+        <div class="tab-content" id="facilities">
+          <div class="tab-item">
+            <img src="./image/facility.png" alt="Facility">
+            <p>Air Conditioning</p>
+          </div>
+          <div class="tab-item">
+            <img src="./image/wifi.png" alt="Wi-Fi">
+            <p>Wi-Fi Connectivity</p>
+          </div>
+        </div>
+    
+        <div class="tab-content" id="tnc">
+          <div class="tab-item">
+            <img src="./image/terms.png" alt="Terms">
+            <p>Cancellation Policy</p>
+          </div>
+          <div class="tab-item">
+            <img src="./image/rules.png" alt="Rules">
+            <p>Travel Rules</p>
+          </div>
+        </div>
+      </div>
+      <script>
+        // Toggle Details Section and show Tabs Container
+        function toggleDetails() {
+          const tabsContainer = document.querySelector('.tabs-container');
+          tabsContainer.style.display = 'block';  // Show tabs container
+        }
+      
+        // Close Tabs Container
+        function closeTabs() {
+          const tabsContainer = document.querySelector('.tabs-container');
+          tabsContainer.style.display = 'none';  // Hide the tabs container
+        }
+      
+        // Tabs functionality
+        const tabs = document.querySelectorAll('.tab-button');
+        const contents = document.querySelectorAll('.tab-content');
+      
+        tabs.forEach((tab) => {
+          tab.addEventListener('click', () => {
+            // Remove active class from all tabs and contents
+            tabs.forEach((btn) => btn.classList.remove('active'));
+            contents.forEach((content) => content.classList.remove('active'));
+      
+            // Add active class to clicked tab and corresponding content
+            tab.classList.add('active');
+            document.getElementById(tab.getAttribute('data-tab')).classList.add('active');
+          });
+        });
+      
+        // Add event listener to 'Select' button to open the tabs container
+        document.querySelector('.select-btn').addEventListener('click', toggleDetails);
+      </script>
+      
+</body>
+</html>

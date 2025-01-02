@@ -1,0 +1,1206 @@
+body {
+    font-family: Arial, sans-serif;
+}
+
+.top-bar {
+    background-color: #0d1b2a;
+    color: white;
+    padding: 5px 15px;
+    font-size: 14px;
+}
+.top-bar a {
+    color: white;
+    text-decoration: none;
+    margin-left: 10px;
+}
+.top-bar a:hover {
+    text-decoration: underline;
+}
+
+.navbar {
+    padding: 10px 15px;
+}
+.navbar-brand img {
+    height: 40px;
+    padding-left: 20px;
+}
+.nav-link {
+    font-size: 16px;
+    margin: 0 10px;
+    text-decoration: none !important;
+}
+.nav-link:hover {
+    text-decoration: underline;
+}
+.country-dropdown {
+    font-size: 14px;
+}
+
+.hero-section {
+    background: url('./image/banner.jpeg') center center/cover no-repeat;
+    height: 633px;
+    position: relative;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.hero-content {
+    position: relative;
+    z-index: 1;
+    text-align: center;
+    color: white;
+    top: 50%;
+    transform: translateY(70%);
+    width: 900px;
+    margin: 0 auto;
+}
+
+.container {
+    background: white !important;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+}
+
+.custom-form .form-floating .form-control {
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    height: 50px;
+    padding: 10px;
+    font-size: 14px;
+}
+
+.custom-form .form-floating label {
+    font-size: 14px;
+    font-weight: 600;
+    top: 10px;
+    left: 10px;
+    transform: scale(1) translateY(0);
+    transition: all 0.2s ease-in-out;
+    color: #999;
+}
+
+.custom-form .form-floating .form-control:focus + label,
+.custom-form .form-floating .form-control:not(:placeholder-shown) + label {
+    top: -8px;
+    left: 10px;
+    transform: scale(0.85);
+    color: #333;
+}
+
+.custom-form .form-floating .form-control:focus {
+    border-color: #0056b3;
+    outline: none;
+    box-shadow: none;
+}
+
+.btn-primary {
+    background-color: #0056b3;
+    border-color: #0056b3;
+    padding: 12px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+
+/* Change background color of the active tab button */
+.nav-link.active {
+  background-color: #1444BD !important; 
+  color: white;
+}
+
+
+
+@media (max-width: 375px) {
+    .hero-section {
+        height: 400px;
+    }
+
+    .hero-content {
+        width: 100%;
+        top: 45%;
+        transform: translateY(50%);
+    }
+
+    .container {
+        padding: 15px;
+    }
+
+    .custom-form .form-floating .form-control {
+        font-size: 12px;
+        height: 40px;
+        padding: 8px;
+    }
+
+    .custom-form .form-floating label {
+        font-size: 12px;
+    }
+
+    .btn-primary {
+        font-size: 14px;
+        padding: 10px 15px;
+    }
+
+    .nav-tabs {
+        display: block;
+    }
+
+    .nav-tabs .nav-item {
+        display: block;
+        margin-bottom: 10px;
+    }
+
+    .nav-tabs .nav-link {
+        width: 100%;
+        text-align: center;
+    }
+  
+
+}
+
+@media (max-width: 480px) {
+    .hero-section {
+        height: 450px;
+    }
+
+    .hero-content {
+        position: relative;
+        width: 90%;
+        top: -50%;
+    }
+
+    .container {
+        padding: 18px;
+    }
+
+    .custom-form .form-floating .form-control {
+        font-size: 13px;
+        height: 45px;
+        padding: 8px;
+    }
+
+    .custom-form .form-floating label {
+        font-size: 13px;
+    }
+
+    .btn-primary {
+        font-size: 15px;
+        padding: 11px 18px;
+    }
+
+    .nav-tabs {
+        display: block;
+    }
+
+    .nav-tabs .nav-item {
+        display: block;
+        margin-bottom: 10px;
+    }
+
+    .nav-tabs .nav-link {
+        width: 100%;
+        text-align: center;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero-section {
+        height: 500px;
+    }
+
+    .hero-content {
+        width: 80%;
+    }
+
+    .container {
+        padding: 20px;
+    }
+
+    .custom-form .form-floating .form-control {
+        font-size: 14px;
+        height: 48px;
+        padding: 9px;
+    }
+
+    .custom-form .form-floating label {
+        font-size: 14px;
+    }
+
+    .btn-primary {
+        font-size: 16px;
+        padding: 12px 20px;
+    }
+
+    .nav-tabs {
+        display: block;
+    }
+
+    .nav-tabs .nav-item {
+        display: block;
+        margin-bottom: 10px;
+    }
+
+    .nav-tabs .nav-link {
+        width: 100%;
+        text-align: center;
+    }
+}
+
+@media (max-width: 1024px) {
+    .hero-section {
+        height: 550px;
+    }
+
+    .hero-content {
+        width: 75%;
+    }
+
+    .container {
+        padding: 25px;
+    }
+
+    .custom-form .form-floating .form-control {
+        font-size: 15px;
+        height: 50px;
+        padding: 10px;
+    }
+
+    .custom-form .form-floating label {
+        font-size: 15px;
+    }
+
+    .btn-primary {
+        font-size: 16px;
+        padding: 12px 20px;
+    }
+
+    .nav-tabs {
+        display: block;
+    }
+
+    .nav-tabs .nav-item {
+        display: block;
+        margin-bottom: 10px;
+    }
+
+    .nav-tabs .nav-link {
+        width: 100%;
+        text-align: center;
+    }
+}
+
+@media (min-width: 1025px) {
+    .hero-section {
+        height: 633px;
+    }
+
+    .hero-content {
+        width: 900px;
+    }
+
+    .custom-form .form-floating .form-control {
+        font-size: 14px;
+        height: 50px;
+        padding: 10px;
+    }
+
+    .custom-form .form-floating label {
+        font-size: 14px;
+    }
+
+    .btn-primary {
+        font-size: 16px;
+        padding: 12px 20px;
+    }
+
+    .nav-tabs {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .nav-tabs .nav-item {
+        display: inline-block;
+    }
+
+    .nav-tabs .nav-link {
+        width: auto;
+        text-align: center;
+    }
+}
+
+
+
+/* cabmate */
+
+/* General Style for Cabmate Section */
+.cabmate {
+    height: auto;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    position: relative;
+    top: 60px;
+    flex-wrap: wrap;
+    padding: 15px;
+}
+
+.cabmate .cab-card {
+    height: 250px;
+    width: 400px;
+}
+
+@media(max-width:667px){
+  .cabmate{
+    position: relative;
+    top: 450px;
+  }
+}
+
+
+/* services style */
+/* Carousel Images */
+.services-card img {
+    height: 120px;
+    object-fit: cover;
+}
+
+/* Section Padding */
+.services-section {
+    padding: 50px 0;
+}
+
+/* Header Styling */
+.services-section .section-header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+/* Card Styling */
+.services-section .card {
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    border: 2px solid #1444BD;
+
+
+    &:hover{
+      background-color: #0056b3;
+      color: white;
+    }
+}
+
+/* Card Image Styling */
+.services-section .card img {
+    border-radius: 10px 10px 0 0;
+    height: 150px;
+    object-fit: cover;
+}
+
+/* Card Body Padding */
+.services-section .card-body {
+    padding: 20px;
+    text-align: center;
+}
+
+/* Carousel Controls Styling */
+.services-section .carousel-control-prev,
+.services-section .carousel-control-next {
+    width: auto;
+    color: #000;
+}
+
+.service-icon{
+  height: 60px;
+  width: 60px;
+  border: 2px solid #0056b3;
+  background-color: white; 
+  position: absolute; 
+ bottom: 40%;
+  left: 40%;
+  border-radius: 50%;
+  display: flex; 
+  align-items: center;
+  justify-content: center;
+}
+
+@media (max-width:1070px){
+  .service-icon{
+    position: absolute;
+    bottom: 46%;
+  }
+}
+
+
+.our-services{
+  color: #1444BD;
+  font-size: 60px;
+}
+
+
+
+
+.services-section .service-icon img{
+  height: 30px;
+}
+/* Ensure Cards Are Responsive */
+@media (max-width: 767px) {
+    .container1{
+        position: relative;
+        top: 450px;
+        width: 90%;
+        margin: 0px auto;
+    }
+    .services-section .carousel-item {
+        display: none;
+    }
+
+    .services-section .d-block.d-md-none {
+        display: block;
+    }
+    .service-icon{
+      position: absolute;
+      bottom: 40%;
+    }
+}
+
+
+
+/* what cabmates say */
+.header-section {
+    text-align: center;
+    padding: 5rem 0;
+  }
+  
+  .header-section h2 {
+    color: #5A87FB;
+    font-weight: bold;
+  }
+  
+  .header-section p {
+    color: #6c757d;
+  }
+  
+  /* Feature Box Styling */
+  .feature-box {
+    background-color: white;
+    padding: 15px 20px;
+    align-items: center;
+    width: 252px !important;
+    height: 112px !important;
+    justify-content: center;
+    font-weight: bold;
+    border-radius: 6px;
+    box-shadow: 0px 0px 7px 2px rgb(175, 172, 172);
+    /* min-width: 60px !important; */
+    text-align: center;
+  }
+  
+  .feature-box img {
+    margin-bottom: 0.5rem;
+    width: 60px;  
+    height: 60px;
+  }
+  
+  .feature-box p {
+    font-size: 14px;
+    margin: 0;
+    color: black;
+  }
+  
+  .container2{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+  }
+
+
+  /* Media Queries */
+  
+  /* Medium devices (tablets) and below */
+  @media (max-width: 768px) {
+    .header-section {
+      padding: 3rem 0;
+    }
+  
+    .feature-box {
+      width: 100%;
+      max-width: 220px; 
+      display: grid;
+      grid-template-columns: repeat(2,1fr) !important;
+      margin-bottom: 20px; /* Adds space between feature boxes */
+    }
+  
+    .feature-box img {
+      width: 50px;  /* Smaller images on mobile */
+      height: 50px;
+    }
+  
+    .header-section h2 {
+      font-size: 28px; /* Smaller text for smaller devices */
+    }
+  
+    .header-section p {
+      font-size: 14px; /* Adjust text size */
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .header-section {
+      padding: 2rem 0;
+      position: relative;
+      top: 450px;
+    }
+    .services-section .our-services{
+      font-size: 40px ;
+    }
+  
+    .container2 {
+      display: grid;
+      grid-template-columns: 1fr 1fr; 
+      gap: 15px; 
+    }
+  
+    .feature-box {
+      width: 90% !important;
+      margin-left: 20px;
+      display: grid;
+      grid-template-columns: repeat(2,1fr) !important;
+      max-width: 220px; /* Adjust width for smaller screens */
+      margin-bottom: 20px; /* Ensure space between items */
+    }
+  
+    .feature-box img {
+      width: 40px;  /* Even smaller images */
+      height: 40px;
+    }
+  
+    .header-section h2 {
+      font-size: 24px; /* Even smaller heading */
+    }
+  
+    .header-section p {
+      font-size: 12px; /* Adjust text size further */
+    }
+  
+  }
+  
+  /* Large devices (large desktops or screens with higher resolutions) */
+  @media (min-width: 1200px) {
+    .feature-box {
+      width: 22%; /* To make them look more evenly spaced on larger screens */
+      max-width: 300px; /* Larger feature boxes */
+    }
+  }
+  
+
+@media (max-width:423px){
+  .feature-box{
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2,1fr) !important;
+    max-width: 220px; /* Adjust width for smaller screens */
+    margin-bottom: 20px; /* Ensure space between items */
+  }
+}
+
+
+
+  /* banefites style */
+  .benefits-section {
+    background-color: #002060;
+    position: relative;
+    background-image: url('Mask\ group.png');
+    padding: 20px;
+    background-repeat: no-repeat;
+    color: white;
+    background-size: 100% 100%;
+  }
+
+  @media(max-width:480px){
+    .benefits-section{
+        position: relative;
+        top: 400px;
+    }
+  }
+
+
+
+  .container3 div{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+  }
+  .container3 .maindiv{
+    background-color: white;
+    color: black;
+    height: 100%;
+    width:110%;
+    border-radius: 50px;
+    display: flex;
+    align-items: flex-start;
+    text-align: justify;
+  }
+  .maindiv .cir{
+    height: 40px;
+    width: 60px;
+    border: 1px solid black;
+    border-radius: 20px;
+    margin-left: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .maindiv h5{
+    line-height: 0;
+    padding-left: 20px;
+  }
+  .maindiv h4{
+  }
+  .maindiv span{
+    position: relative;
+    bottom: 10px;
+    padding-left: 20px;
+  }
+
+
+  .benefits-section .container3 span{
+    color: black;
+  }
+
+  .wave-overlay{
+    display: flex;
+    align-items: center;
+    margin: 300px 0px 0px 0px ;
+    justify-content: center;
+  }
+
+  .left-div{
+    height: 400px;
+    width: 250px;
+    border-radius: 300px;
+    z-index: 1;
+    position: relative;
+    left: 40px;
+    background-color: #FECE00;
+  }
+
+  .left-img{
+    height: 390px;
+    width: 240px;
+    border-radius: 300px;
+    /* background-color: red; */
+    position: relative;
+    top: 2px;
+    left: 10px;
+  }
+  .left-img img{
+    height: 390px;
+    border-radius: 300px;
+    position: relative;
+    bottom: 3px;
+  }
+  .right-div{
+    height: 400px;
+    width: 250px;
+    border-radius: 300px;
+    position: relative;
+    bottom: 160px;
+    left: -40px;
+    background-color: #FECE00;
+  }
+
+
+.right-div img{
+    height: 390px;
+    border-radius: 300px;
+}
+
+@media (max-width:480px){
+  .left-div{
+    width: 200px !important;
+    left: 20px;
+  }
+  .left-img img{
+    width: 80%;
+  }
+  .right-div{
+    width: 200px !important;
+  }
+  .right-div img{
+    width: 190px;
+  }
+}
+
+
+
+    /* Hourly Rentals Section */
+/* Card Layout for Hourly Rentals */
+.container4{
+    width: 90%;
+    margin: 0 auto;
+}
+
+@media (max-width:480px){
+    .container4{
+        position: relative;
+        top: 400px;
+    }
+}
+.hourly-rentals .card {
+    border: none;
+    border-radius: 10px;
+    overflow: hidden; /* Ensures the image fills the card without spilling out */
+    position: relative;
+  }
+
+  .Hourly-details{
+    height: 80px;
+    width: 90%;
+    background-color: white;
+    margin: 0 auto;
+    position: relative;
+    bottom: 40px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    padding: 3px;
+  }
+  .Hourly-btn{
+    width: 90%;
+    position: relative;
+    bottom: 50px;
+    border-top:2px solid #5D7ED2 ;
+    border-left: none;
+    border-bottom: none;
+    border-right: none;
+    border-radius: 10px;
+    height: 40px;
+    background-color: white;
+    color: #1444BD;
+    font-weight: bold;
+    box-shadow: 0px 0px 6px 1px rgb(161, 134, 134);
+
+    &:hover{
+      background-color: #1444BD;
+      color: white;
+    }
+  }
+
+
+  .hourly-dumy{
+    height: 70px;
+    width: 50px;
+    position: absolute;
+    right: 0;
+    /* border-radius: 20px 0px 0px 20px; */
+    /* background-color: red; */
+
+  }
+  /* Image inside the card to take up full size */
+  .hourly-rentals .card img {
+    width: 100%;  
+    height: 400px; 
+    object-fit: cover; 
+  }
+  
+  /* Styling for smaller screens */
+  @media (max-width: 768px) {
+    .hourly-rentals .col-md-3 {
+      flex: 1 1 48%; /* Make cards take up 50% width on tablets and smaller screens */
+      margin-bottom: 20px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .hourly-rentals .col-md-3 {
+      flex: 1 1 100%; /* Make cards take up 100% width on mobile screens */
+    }
+    
+    .hourly-rentals .card img {
+      height: 250px; /* Adjust image height for small screens */
+    }
+  }
+  
+      
+ /* Testimonials Section */
+ .testimonials-section {
+    background-color: #002060;
+  }
+
+  .testimonial-box {
+    max-width: 600px;
+  }
+
+  .testimonial-box img {
+    width: 60px;
+    height: 60px;
+  }
+
+  .testimonial-box p {
+    font-size: 14px;
+    margin: 0;
+  }
+
+
+
+  /* Section Styling */
+  .intercity-services {
+    background-color: #f8f9fa;
+  }
+
+  .intercity-services .image-container img {
+    border-radius: 15px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  }
+
+  .intercity-services h2 {
+    font-size: 28px;
+    color: #002060;
+  }
+
+  .intercity-services h5 {
+    color: #003580;
+  }
+
+  .intercity-services p {
+    font-size: 16px;
+  }
+
+  .header-section11 h1{
+    padding-left: 8%;
+    /* text-align: justify; */
+  }
+.feature-section {
+    padding: 5rem 0;
+    background-color: #f8f9fa; /* Light background */
+  }
+  
+  .feature-section h2 {
+    font-size: 2rem;
+    font-weight: bold;
+  }
+  
+  .feature-section h3 {
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+  
+  .feature-section p {
+    font-size: 1rem;
+    color: #6c757d;
+  }
+  
+  .feature-img {
+    position: relative;
+
+  }
+  
+  .feature-img img {
+    width: 80%;
+    height: 640px;
+    z-index: 1;
+    border-radius: 40px;
+    position: relative;
+    /* top:35px; */
+    left: 70px;
+    object-fit: cover;
+  }
+  .box {
+    position: absolute;
+    height: 450px;
+    width: 150px;
+  }
+  
+  .box-green {
+    background-color: #1444BD;
+    top: -10px;
+    right: 20px;
+    position: absolute;
+    left: 410px;
+    border-radius: 0px 40px 40px 0px;
+  }
+  .box-red {
+    background-color: #1444BD;
+    top: 200px;
+    left: 60px;
+    position: absolute;
+    border-radius: 30px 0px 0px 40px;
+  }
+  
+  /* Responsive Layout */
+  @media (max-width: 768px) {
+    .feature-section h2 {
+      font-size: 1.5rem; /* Reduce font size on smaller devices */
+    }
+  
+    .feature-section h3 {
+      font-size: 1.2rem; /* Adjust h3 size */
+    }
+  
+    .feature-section p {
+      font-size: 0.9rem; /* Adjust paragraph text size */
+    }
+  
+    .feature-img img {
+      max-height: 300px; 
+      z-index: 1;
+    }
+  
+    .box {
+      width: 120px;
+      height: 180px;
+    }
+  
+    .box-green {
+      top: 20px;
+      right: 10px;
+    }
+  
+    .box-red {
+      top: 150px;
+      left: 10px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .feature-section {
+      padding: 3rem 1rem; 
+      position: relative;
+      top: 350px;
+    }
+  
+    .feature-section h2 {
+      font-size: 1.2rem; 
+    }
+  
+    .feature-section h3 {
+      font-size: 1rem; 
+    }
+  
+    .feature-section p {
+      font-size: 0.8rem; 
+    }
+    .feature-img{
+        position: relative;
+        right: 20px;
+    }
+  
+    .feature-img img {
+      max-height: 435px;
+      width: 100% !important;
+      position: relative;
+      left: 20px;
+      top: 20px;
+      bottom: 90px;
+      
+    }
+  
+    .box {
+      width: 158px; 
+      height: 288px; 
+    }
+  
+    .box-green {
+      top: 15px;
+      right: 0px;
+      left: 220px;
+      /* background-color: green; */
+    }
+  
+    .box-red {
+      top: 180px;
+      left: 5px;
+    }
+  }
+  
+/* app dounload style */
+
+.app-container {
+    background-image: url('image/background.png');
+}
+.get-btn{
+  background-color: #2B5EE0;
+  border: none;
+  height: 51px;
+  width: 174px;
+  font-size: 16px;
+  color: white;
+  border-radius: 20px;
+}
+.app-section {
+    height: 452px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+@media (max-width:480px){
+    .app-container{
+        position: relative;
+        top: 340px;
+    }
+}
+
+.left-side {
+    height: 100%;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    padding: 22px;
+    align-items: flex-start;
+}
+
+.title {
+    font-weight: bolder;
+}
+
+.promo-text {
+    font-size: 16px;
+}
+
+.input-group {
+    width: 60%;
+    color: gray;
+}
+
+.btn-primary {
+    width: 174px;
+    height: 51px;
+    border-radius: 20px;
+    margin-top: 20px;
+}
+
+.btn-group {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding-top: 22px;
+    border-radius: 10px;
+}
+
+.btn-group .btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    background-color: #000;
+    color: white;
+    padding: 10px;
+    width: 150px;
+    border-radius: 10px;
+}
+
+.btn-icon {
+    height: 20px;
+}
+
+.btn-text {
+    line-height: 1;
+    padding-top: 8px;
+    margin: 0;
+}
+
+/* Image Styling */
+.right-side {
+    height: 100%;
+    width: 50%;
+}
+
+.image-container {
+    height: 90%;
+    background-image: url('Ellipse 2152.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+}
+
+img.img-fluid {
+    height: 112%;
+    width: auto;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    .left-side, .right-side {
+        width: 100%;
+        padding: 20px;
+    }
+
+    .input-group {
+        width: 100%;
+    }
+
+    .btn-group {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .btn {
+        width: 100%;
+        justify-content: center;
+        margin-bottom: 15px;
+    }
+
+    .image-container img {
+        height: 100%;
+    }
+}
+
+@media (max-width: 576px) {
+    .title {
+        font-size: 1.5rem;
+    }
+
+    .promo-text {
+        font-size: 14px;
+    }
+
+    .btn-primary {
+        width: 100%;
+    }
+
+    .input-group {
+        width: 100%;
+    }
+}
+
+
+
+.feature-section {
+    padding: 40px 20px;
+}
+.footer {
+    background: #111416;
+    color: #FFFFFF;
+    padding: 20px 0;
+}
+@media (max-width:667px){
+    .footer{
+        position: relative;
+        top: 800px;
+    }
+    .bbb{
+        position: relative;
+        top: 800px;
+    }
+}
+.footer a {
+    color: #ddd;
+    text-decoration: none;
+}
+.footer a:hover {
+    color: #fff;
+}
+
+
